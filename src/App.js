@@ -11,12 +11,19 @@ class App extends Component {
       {name: 'shush',age:10,id:3}
     ]
   }
+  add=(ninja)=>{
+    ninja.id=Math.random();
+    let ninjas=[...this.state.ninjas,ninja];
+    this.setState({
+      ninjas:ninjas
+    })
+  }
   render() {
     return (
       <div className="App">
         <h1>WELCOME</h1>
         <Nin ninjas={this.state.ninjas}/>  
-        <Add/>          
+        <Add add={this.add}/>          
       </div>
     );
   }

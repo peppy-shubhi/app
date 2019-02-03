@@ -3,7 +3,8 @@ import React, {Component} from 'react'
 class Add extends Component{
     state={
         name:null,
-        age:null
+        age:null,
+        id:null
     }
     handle_change=(e)=>{
         this.setState({
@@ -13,7 +14,7 @@ class Add extends Component{
     handle_submit=(e)=>
     {
         e.preventDefault(); //for removing default refreshing of page when submitted//
-        console.log(this.state);
+        this.props.add(this.state);
     }
 
     render()
