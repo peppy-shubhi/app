@@ -5,8 +5,9 @@ import Nin from './Nin.js';
 class App extends Component {
   state={
     ninjas:[
-      {name:'adm',age:333,id:1},
-      {name: 'lalal',age:999,id:2}
+      {name:'adm',age:22,id:1},
+      {name: 'lalal',age:21,id:2},
+      {name: 'shush',age:10,id:3}
     ]
   }
   render() {
