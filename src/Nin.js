@@ -4,17 +4,17 @@ const Nin=({ninjas}) =>{
     
        
        const ninjaList= ninjas.map(ninja=>{
-           if(ninja.age>20)
-           {
-           return (
+           return (ninja.age>20)?
+           
+           (
                <div className="ninja" key={ninja.id}>
             <div>Name:{ninja.name}</div>
             <div>Age:{ninja.age}</div>
             </div>
 
-           )
-       }
-       else return null
+           ): null;
+       
+       
        })
         return(
             <div className="ninjalist">

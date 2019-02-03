@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nin from './Nin.js';
+import Add from './Form.js';
 
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>WELCOME</h1>
-        <Nin ninjas={this.state.ninjas}/>            
+        <Nin ninjas={this.state.ninjas}/>  
+        <Add/>          
       </div>
     );
   }
