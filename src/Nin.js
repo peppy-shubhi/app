@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nin=({ninjas}) =>{
+const Nin=({ninjas, delete_en}) =>{
     
        
        const ninjaList= ninjas.map(ninja=>{
@@ -10,6 +10,7 @@ const Nin=({ninjas}) =>{
                <div className="ninja" key={ninja.id}>
             <div>Name:{ninja.name}</div>
             <div>Age:{ninja.age}</div>
+            <button onClick={()=>{delete_en(ninja.id)}}>Deleteit</button>
             </div>
 
            ): null;

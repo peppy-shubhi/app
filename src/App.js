@@ -13,20 +13,35 @@ class App extends Component {
   }
   add=(ninja)=>{
     ninja.id=Math.random();
-    let ninjas=[...this.state.ninjas,ninja];
+    let ninjas2=[...this.state.ninjas,ninja];
     this.setState({
-      ninjas:ninjas
+      ninjas:ninjas2
     })
+  }
+
+
+  delete_en=(id)=>{
+    let ninjas1=this.state.ninjas.filter(
+      ninja=>{
+        return ninja.id !== id
+      }
+
+    );
+    this.setState(
+      {
+        ninjas:ninjas1
+      }
+    )
+
   }
   render() {
     return (
       <div className="App">
         <h1>WELCOME</h1>
-        <Nin ninjas={this.state.ninjas}/>  
+        <Nin delete_en={this.delete_en} ninjas={this.state.ninjas}/>  
         <Add add={this.add}/>          
       </div>
     );
   }
 }
-
 export default App;
